@@ -11,3 +11,8 @@ struct GoldPrice: Codable {
     let amount: String
     let date: String
 }
+
+struct AppError: Codable {
+    let error: String
+    let code: Int
+}

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		317D2CB491ABF6EB0BFADDC8 /* Pods_GoldPrice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC0868BC45BF271FAFCCC07 /* Pods_GoldPrice.framework */; };
 		E750498E26131A6C0011E172 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E750498D26131A6C0011E172 /* AppDelegate.swift */; };
 		E750499026131A6C0011E172 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E750498F26131A6C0011E172 /* SceneDelegate.swift */; };
 		E750499226131A6C0011E172 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E750499126131A6C0011E172 /* ViewController.swift */; };
@@ -14,9 +15,14 @@
 		E750499A26131A6D0011E172 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E750499826131A6D0011E172 /* LaunchScreen.storyboard */; };
 		E75049EC2613401B0011E172 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75049EB2613401B0011E172 /* APICaller.swift */; };
 		E75049F1261340D00011E172 /* GoldPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75049F0261340D00011E172 /* GoldPrice.swift */; };
+		E75049F4261342B40011E172 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75049F3261342B40011E172 /* Extensions.swift */; };
+		E75049FC26134C130011E172 /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E75049FA26134BD40011E172 /* MyriadPro-Bold.otf */; };
+		E75049FE26134C160011E172 /* MyriadPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E75049FB26134BD40011E172 /* MyriadPro-Regular.otf */; };
+		E7504A0526137C530011E172 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7504A0426137C530011E172 /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8AC0868BC45BF271FAFCCC07 /* Pods_GoldPrice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldPrice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E750498A26131A6C0011E172 /* GoldPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E750498D26131A6C0011E172 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E750498F26131A6C0011E172 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +32,12 @@
 		E750499B26131A6D0011E172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E75049EB2613401B0011E172 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		E75049F0261340D00011E172 /* GoldPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldPrice.swift; sourceTree = "<group>"; };
+		E75049F3261342B40011E172 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E75049FA26134BD40011E172 /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
+		E75049FB26134BD40011E172 /* MyriadPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Regular.otf"; sourceTree = "<group>"; };
+		E7504A0426137C530011E172 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		EC11212ED2EF15038665353F /* Pods-GoldPrice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldPrice.release.xcconfig"; path = "Target Support Files/Pods-GoldPrice/Pods-GoldPrice.release.xcconfig"; sourceTree = "<group>"; };
+		F582326F6F2BAD7CC2CD3BC6 /* Pods-GoldPrice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldPrice.debug.xcconfig"; path = "Target Support Files/Pods-GoldPrice/Pods-GoldPrice.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				317D2CB491ABF6EB0BFADDC8 /* Pods_GoldPrice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A2BB34C54C24EAFCE7C38AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AC0868BC45BF271FAFCCC07 /* Pods_GoldPrice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBD81165F757950FDBA2A0FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F582326F6F2BAD7CC2CD3BC6 /* Pods-GoldPrice.debug.xcconfig */,
+				EC11212ED2EF15038665353F /* Pods-GoldPrice.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E750498126131A6C0011E172 = {
 			isa = PBXGroup;
 			children = (
 				E750498C26131A6C0011E172 /* GoldPrice */,
 				E750498B26131A6C0011E172 /* Products */,
+				DBD81165F757950FDBA2A0FB /* Pods */,
+				6A2BB34C54C24EAFCE7C38AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +103,11 @@
 		E75049A626131BB20011E172 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E75049F6261347950011E172 /* fonts */,
 				E750498D26131A6C0011E172 /* AppDelegate.swift */,
 				E750498F26131A6C0011E172 /* SceneDelegate.swift */,
 				E750499626131A6D0011E172 /* Assets.xcassets */,
+				E75049F3261342B40011E172 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -98,8 +132,18 @@
 			isa = PBXGroup;
 			children = (
 				E75049EB2613401B0011E172 /* APICaller.swift */,
+				E7504A0426137C530011E172 /* NetworkMonitor.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		E75049F6261347950011E172 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E75049FA26134BD40011E172 /* MyriadPro-Bold.otf */,
+				E75049FB26134BD40011E172 /* MyriadPro-Regular.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E750499E26131A6D0011E172 /* Build configuration list for PBXNativeTarget "GoldPrice" */;
 			buildPhases = (
+				99AC2C63363B634EF38F52C2 /* [CP] Check Pods Manifest.lock */,
 				E750498626131A6C0011E172 /* Sources */,
 				E750498726131A6C0011E172 /* Frameworks */,
 				E750498826131A6C0011E172 /* Resources */,
+				3B35BD11A03E603775161844 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,10 +207,54 @@
 			files = (
 				E750499A26131A6D0011E172 /* LaunchScreen.storyboard in Resources */,
 				E750499726131A6D0011E172 /* Assets.xcassets in Resources */,
+				E75049FE26134C160011E172 /* MyriadPro-Regular.otf in Resources */,
+				E75049FC26134C130011E172 /* MyriadPro-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B35BD11A03E603775161844 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoldPrice/Pods-GoldPrice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoldPrice/Pods-GoldPrice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoldPrice/Pods-GoldPrice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99AC2C63363B634EF38F52C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoldPrice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E750498626131A6C0011E172 /* Sources */ = {
@@ -172,10 +262,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E75049F1261340D00011E172 /* GoldPrice.swift in Sources */,
+				E75049F4261342B40011E172 /* Extensions.swift in Sources */,
 				E750499226131A6C0011E172 /* ViewController.swift in Sources */,
 				E750498E26131A6C0011E172 /* AppDelegate.swift in Sources */,
 				E75049EC2613401B0011E172 /* APICaller.swift in Sources */,
 				E750499026131A6C0011E172 /* SceneDelegate.swift in Sources */,
+				E7504A0526137C530011E172 /* NetworkMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,18 +403,21 @@
 		};
 		E750499F26131A6D0011E172 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F582326F6F2BAD7CC2CD3BC6 /* Pods-GoldPrice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GoldPrice/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = HieuTong.GoldPrice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -330,18 +425,21 @@
 		};
 		E75049A026131A6D0011E172 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC11212ED2EF15038665353F /* Pods-GoldPrice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GoldPrice/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = HieuTong.GoldPrice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
