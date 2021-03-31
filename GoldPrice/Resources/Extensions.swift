@@ -85,6 +85,10 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return image!
     }
+    
+    func changeColor() -> UIImage {
+        return withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+    }
 }
 
 extension String {
@@ -102,6 +106,15 @@ extension String {
 }
 
 extension UIView {
+    
+    var width: CGFloat {
+        return frame.size.width
+    }
+    
+    var height: CGFloat {
+        return frame.size.height
+    }
+    
     func addSubviews(views: UIView...) {
         for view in views {
             addSubview(view)
@@ -113,6 +126,80 @@ extension UIView {
         let constraint = heightAnchor.constraint(equalToConstant: height)
         constraint.isActive = isActive
         return constraint
+    }
+    
+    func addConstraints(withFormat format: String, views: UIView...) {
+        var viewsDictionary = [String: UIView]()
+        
+        for i in 0 ..< views.count {
+            let key = "v\(i)"
+            views[i].translatesAutoresizingMaskIntoConstraints = false
+            viewsDictionary[key] = views[i]
+        }
+        
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: viewsDictionary))
+    }
+    
+    @discardableResult
+    public func vertical(toView view: UIView, space: CGFloat = 0, isActive: Bool = true)
+        -> (top: NSLayoutConstraint, bottom: NSLayoutConstraint) {
+            let top = topAnchor.constraint(equalTo: view.topAnchor, constant: space)
+            let bottom = bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -space)
+            top.isActive = isActive
+            bottom.isActive = isActive
+            return (top, bottom)
+    }
+}
+
+extension UIViewController {
+    @discardableResult
+    func addBackButton(tintColor: UIColor = .black) -> UIBarButtonItem {
+        
+        let backArrowImageView = UIImageView(image: UIImage(named: "back_arrow")?.changeColor())
+        backArrowImageView.contentMode = .scaleAspectFit
+        backArrowImageView.tintColor = tintColor
+        let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 44))
+        backButton.addSubview(backArrowImageView)
+        backButton.addConstraints(withFormat: "H:|-(0)-[v0]", views: backArrowImageView)
+        backArrowImageView.vertical(toView: backButton)
+        backButton.addTarget(self, action: #selector(back), for: .touchUpInside)
+        
+        let backBarButton = UIBarButtonItem(customView: backButton)
+        backBarButton.customView?.translatesAutoresizingMaskIntoConstraints = false
+        backBarButton.customView?.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        backBarButton.customView?.widthAnchor.constraint(equalToConstant: 54).isActive = true
+        
+        navigationItem.leftBarButtonItem = backBarButton
+        
+        return backBarButton
+    }
+    
+    @objc func back() {
+        pop()
+    }
+
+    func push(_ controller: UIViewController) {
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
+    
+    func pop() {
+        DispatchQueue.main.async {
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    func popToRoot() {
+        DispatchQueue.main.async {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
+    
+    func pop(_ controller: UIViewController) {
+        DispatchQueue.main.async {
+            self.navigationController?.popToViewController(controller, animated: true)
+        }
     }
 }
 

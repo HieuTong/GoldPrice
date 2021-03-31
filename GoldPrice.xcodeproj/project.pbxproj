@@ -11,13 +11,17 @@
 		E73A739326145BC4008947FA /* MError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A739226145BC4008947FA /* MError.swift */; };
 		E73A739C26146988008947FA /* UIMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A739B26146988008947FA /* UIMaker.swift */; };
 		E73A73A026146B63008947FA /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A739F26146B63008947FA /* MessageManager.swift */; };
-		E73A73B12614AC86008947FA /* GoldPriceCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73B02614AC86008947FA /* GoldPriceCellViewModel.swift */; };
+		E73A73B12614AC86008947FA /* ContentCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73B02614AC86008947FA /* ContentCellViewModel.swift */; };
 		E73A73B72614D230008947FA /* DotCALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73B62614D230008947FA /* DotCALayer.swift */; };
 		E73A73BB2614D257008947FA /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73BA2614D257008947FA /* LineChart.swift */; };
 		E73A73BE2614D27D008947FA /* CurveAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73BD2614D27D008947FA /* CurveAlgorithm.swift */; };
 		E73A73C22614EAD4008947FA /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73C12614EAD4008947FA /* BaseTableViewCell.swift */; };
-		E73A73C52614EB1A008947FA /* GoldPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73C42614EB1A008947FA /* GoldPriceTableViewCell.swift */; };
+		E73A73C52614EB1A008947FA /* ContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73C42614EB1A008947FA /* ContentTableViewCell.swift */; };
 		E73A73CA2614F3DA008947FA /* ServiceConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73C92614F3DA008947FA /* ServiceConnector.swift */; };
+		E73A73CD2614FB08008947FA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73CC2614FB08008947FA /* SettingViewController.swift */; };
+		E73A73D02614FB95008947FA /* SettingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73CF2614FB95008947FA /* SettingModels.swift */; };
+		E73A73D82614FF24008947FA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73D72614FF24008947FA /* ProfileViewController.swift */; };
+		E73A73DC261504EF008947FA /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73DB261504EF008947FA /* UserProfile.swift */; };
 		E750498E26131A6C0011E172 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E750498D26131A6C0011E172 /* AppDelegate.swift */; };
 		E750499026131A6C0011E172 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E750498F26131A6C0011E172 /* SceneDelegate.swift */; };
 		E750499226131A6C0011E172 /* GoldPricesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E750499126131A6C0011E172 /* GoldPricesViewController.swift */; };
@@ -36,13 +40,17 @@
 		E73A739226145BC4008947FA /* MError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MError.swift; sourceTree = "<group>"; };
 		E73A739B26146988008947FA /* UIMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMaker.swift; sourceTree = "<group>"; };
 		E73A739F26146B63008947FA /* MessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
-		E73A73B02614AC86008947FA /* GoldPriceCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldPriceCellViewModel.swift; sourceTree = "<group>"; };
+		E73A73B02614AC86008947FA /* ContentCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCellViewModel.swift; sourceTree = "<group>"; };
 		E73A73B62614D230008947FA /* DotCALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotCALayer.swift; sourceTree = "<group>"; };
 		E73A73BA2614D257008947FA /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		E73A73BD2614D27D008947FA /* CurveAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveAlgorithm.swift; sourceTree = "<group>"; };
 		E73A73C12614EAD4008947FA /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
-		E73A73C42614EB1A008947FA /* GoldPriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldPriceTableViewCell.swift; sourceTree = "<group>"; };
+		E73A73C42614EB1A008947FA /* ContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableViewCell.swift; sourceTree = "<group>"; };
 		E73A73C92614F3DA008947FA /* ServiceConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConnector.swift; sourceTree = "<group>"; };
+		E73A73CC2614FB08008947FA /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		E73A73CF2614FB95008947FA /* SettingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModels.swift; sourceTree = "<group>"; };
+		E73A73D72614FF24008947FA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E73A73DB261504EF008947FA /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		E750498A26131A6C0011E172 /* GoldPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E750498D26131A6C0011E172 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E750498F26131A6C0011E172 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,7 +109,7 @@
 		E73A73AF2614AC36008947FA /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				E73A73B02614AC86008947FA /* GoldPriceCellViewModel.swift */,
+				E73A73B02614AC86008947FA /* ContentCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -128,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				E73A73C12614EAD4008947FA /* BaseTableViewCell.swift */,
-				E73A73C42614EB1A008947FA /* GoldPriceTableViewCell.swift */,
+				E73A73C42614EB1A008947FA /* ContentTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				E750499126131A6C0011E172 /* GoldPricesViewController.swift */,
+				E73A73CC2614FB08008947FA /* SettingViewController.swift */,
+				E73A73D72614FF24008947FA /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -193,6 +203,8 @@
 			children = (
 				E75049F0261340D00011E172 /* GoldPrice.swift */,
 				E73A739226145BC4008947FA /* MError.swift */,
+				E73A73CF2614FB95008947FA /* SettingModels.swift */,
+				E73A73DB261504EF008947FA /* UserProfile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -333,17 +345,21 @@
 			files = (
 				E75049F1261340D00011E172 /* GoldPrice.swift in Sources */,
 				E75049F4261342B40011E172 /* Extensions.swift in Sources */,
+				E73A73DC261504EF008947FA /* UserProfile.swift in Sources */,
+				E73A73D82614FF24008947FA /* ProfileViewController.swift in Sources */,
 				E750499226131A6C0011E172 /* GoldPricesViewController.swift in Sources */,
-				E73A73C52614EB1A008947FA /* GoldPriceTableViewCell.swift in Sources */,
+				E73A73C52614EB1A008947FA /* ContentTableViewCell.swift in Sources */,
 				E750498E26131A6C0011E172 /* AppDelegate.swift in Sources */,
+				E73A73CD2614FB08008947FA /* SettingViewController.swift in Sources */,
 				E73A73CA2614F3DA008947FA /* ServiceConnector.swift in Sources */,
-				E73A73B12614AC86008947FA /* GoldPriceCellViewModel.swift in Sources */,
+				E73A73B12614AC86008947FA /* ContentCellViewModel.swift in Sources */,
 				E73A73BE2614D27D008947FA /* CurveAlgorithm.swift in Sources */,
 				E73A73BB2614D257008947FA /* LineChart.swift in Sources */,
 				E75049EC2613401B0011E172 /* APICaller.swift in Sources */,
 				E750499026131A6C0011E172 /* SceneDelegate.swift in Sources */,
 				E73A73B72614D230008947FA /* DotCALayer.swift in Sources */,
 				E73A739C26146988008947FA /* UIMaker.swift in Sources */,
+				E73A73D02614FB95008947FA /* SettingModels.swift in Sources */,
 				E73A73A026146B63008947FA /* MessageManager.swift in Sources */,
 				E73A739326145BC4008947FA /* MError.swift in Sources */,
 				E73A73C22614EAD4008947FA /* BaseTableViewCell.swift in Sources */,

@@ -8,4 +8,5 @@ target 'GoldPrice' do
   # Pods for GoldPrice
   pod 'Alamofire', '~> 4.8.0'
   pod 'SnapKit'
+  pod 'SDWebImage'
 end

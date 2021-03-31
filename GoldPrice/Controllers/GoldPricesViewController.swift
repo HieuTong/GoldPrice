@@ -20,12 +20,12 @@ class GoldPricesViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
-        tableView.register(GoldPriceTableViewCell.self, forCellReuseIdentifier: GoldPriceTableViewCell.identifier)
+        tableView.register(ContentTableViewCell.self, forCellReuseIdentifier: ContentTableViewCell.identifier)
         return tableView
     }()
     
     private var prices = [GoldPrice]()
-    private var viewModels = [GoldPriceCellViewModel]()
+    private var viewModels = [ContentCellViewModel]()
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,10 +61,8 @@ class GoldPricesViewController: UIViewController {
     func formatBar() {
         navigationController?.setNavBarTitle(color: .blue_1, size: 20)
         navigationController?.setBackgroundAndShadowImage(bgColor: UIColor.white, sdColor: UIColor.blue_2)
-        let infoButton = UIButton(type: .system)
-        infoButton.setImage(UIImage(named: "info_icon"), for: .normal)
-        infoButton.addTarget(self, action: #selector(handleShowInfo), for: .touchUpInside)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: infoButton)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "info_icon"), style: .done, target: self, action: #selector(didTapSettings))
     }
     
     func fetchData() {
@@ -74,7 +72,7 @@ class GoldPricesViewController: UIViewController {
     func didGetDataSuccess(_ prices: [GoldPrice]) {
         self.prices = prices
         curvedlineChart.dataEntries = prices.compactMap({ PointEntry(value: Int(Double($0.amount) ?? 0), label: String.formattedDate(string: $0.date, format: "d MMM")) })
-        self.viewModels = prices.compactMap({ GoldPriceCellViewModel(date: String.formattedDate(string: $0.date, format: "dd MMMM YYYY"), price: "$ \($0.amount)")}).reversed()
+        self.viewModels = prices.compactMap({ ContentCellViewModel(title: String.formattedDate(string: $0.date, format: "dd MMMM YYYY"), content: "$ \($0.amount)")}).reversed()
         self.tableView.reloadData()
     }
     
@@ -82,8 +80,9 @@ class GoldPricesViewController: UIViewController {
         MessageManager.shared.show(message: err.error ?? "Oops, something went wrong!", type: .error)
     }
     
-    @objc func handleShowInfo() {
-        //handle show info
+    @objc func didTapSettings() {
+        let vc = SettingViewController()
+        push(vc)
     }
 }
 
@@ -98,7 +97,7 @@ extension GoldPricesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: GoldPriceTableViewCell.identifier, for: indexPath) as? GoldPriceTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ContentTableViewCell.identifier, for: indexPath) as? ContentTableViewCell else {
              return UITableViewCell()
         }
         cell.configure(with: viewModels[indexPath.row])
