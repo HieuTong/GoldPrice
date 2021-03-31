@@ -10,6 +10,11 @@ import Foundation
 struct GoldPrice: Codable {
     let amount: String
     let date: String
+    
+    init(raw: AnyObject) {
+        amount = raw["amount"] as? String ?? ""
+        date = raw["date"] as? String ?? ""
+    }
 }
 
 struct AppError: Codable {

@@ -33,13 +33,15 @@ extension UIColor {
     static let blue_1 = color(hex: "0F85D1")
     static let blue_2 = color(hex: "9DCDEC")
     static let blue_3 = color(hex: "DCF2FF")
+    static let green_1 = color(hex: "00C6A2")
+    static let red_error = color(hex: "F73C52")
 }
 
 enum appFont: String {
     case myriadPro_bold = "MyriadPro-Bold"
     case myriadPro_regular = "MyriadPro-Regular"
     
-    static func myriadPro(size: CGFloat) -> UIFont {
+    static func myriadProBold(size: CGFloat) -> UIFont {
         return font(name: .myriadPro_bold, size: size)
     }
     
@@ -52,3 +54,66 @@ enum appFont: String {
         return font
     }
 }
+
+extension UIView {
+    @objc func createRoundCorner(_ radius: CGFloat = 7) {
+        layer.cornerRadius = radius
+        clipsToBounds = true
+    }
+}
+
+extension UINavigationController {
+    func setNavBarTitle(color: UIColor, size: CGFloat) {
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: color, NSAttributedString.Key.font: appFont.myriadProBold(size: size)]
+    }
+    
+    func setBackgroundAndShadowImage(bgColor: UIColor, sdColor: UIColor) {
+        navigationBar.setBackgroundImage(UIImage.imageFromColor(color: bgColor), for: .default)
+        navigationBar.shadowImage = UIImage.imageFromColor(color: sdColor)
+    }
+}
+
+extension UIImage {
+    static func imageFromColor(color: UIColor) -> UIImage
+    {
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()!
+        context.setFillColor(color.cgColor)
+        context.fill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
+    }
+}
+
+extension String {
+    static func formattedDate(string: String, format: String) -> String {
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "dd/MM/yyyy"
+        guard let date = inputFormatter.date(from: string) else {
+            return string
+        }
+        let outputFormatter = DateFormatter()
+        outputFormatter.dateFormat = format
+
+        return outputFormatter.string(from: date)
+    }
+}
+
+extension UIView {
+    func addSubviews(views: UIView...) {
+        for view in views {
+            addSubview(view)
+        }
+    }
+    
+    @discardableResult
+    public func height(_ height: CGFloat, isActive: Bool = true) -> NSLayoutConstraint {
+        let constraint = heightAnchor.constraint(equalToConstant: height)
+        constraint.isActive = isActive
+        return constraint
+    }
+}
+
+

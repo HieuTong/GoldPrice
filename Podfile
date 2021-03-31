@@ -6,6 +6,6 @@ target 'GoldPrice' do
   use_frameworks!
 
   # Pods for GoldPrice
-  pod 'ReachabilitySwift'
-
+  pod 'Alamofire', '~> 4.8.0'
+  pod 'SnapKit'
 end

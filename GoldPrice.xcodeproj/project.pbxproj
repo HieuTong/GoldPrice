@@ -8,9 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		317D2CB491ABF6EB0BFADDC8 /* Pods_GoldPrice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC0868BC45BF271FAFCCC07 /* Pods_GoldPrice.framework */; };
+		E73A739326145BC4008947FA /* MError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A739226145BC4008947FA /* MError.swift */; };
+		E73A739C26146988008947FA /* UIMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A739B26146988008947FA /* UIMaker.swift */; };
+		E73A73A026146B63008947FA /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A739F26146B63008947FA /* MessageManager.swift */; };
+		E73A73B12614AC86008947FA /* GoldPriceCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73B02614AC86008947FA /* GoldPriceCellViewModel.swift */; };
+		E73A73B72614D230008947FA /* DotCALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73B62614D230008947FA /* DotCALayer.swift */; };
+		E73A73BB2614D257008947FA /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73BA2614D257008947FA /* LineChart.swift */; };
+		E73A73BE2614D27D008947FA /* CurveAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73BD2614D27D008947FA /* CurveAlgorithm.swift */; };
+		E73A73C22614EAD4008947FA /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73C12614EAD4008947FA /* BaseTableViewCell.swift */; };
+		E73A73C52614EB1A008947FA /* GoldPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73C42614EB1A008947FA /* GoldPriceTableViewCell.swift */; };
+		E73A73CA2614F3DA008947FA /* ServiceConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A73C92614F3DA008947FA /* ServiceConnector.swift */; };
 		E750498E26131A6C0011E172 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E750498D26131A6C0011E172 /* AppDelegate.swift */; };
 		E750499026131A6C0011E172 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E750498F26131A6C0011E172 /* SceneDelegate.swift */; };
-		E750499226131A6C0011E172 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E750499126131A6C0011E172 /* ViewController.swift */; };
+		E750499226131A6C0011E172 /* GoldPricesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E750499126131A6C0011E172 /* GoldPricesViewController.swift */; };
 		E750499726131A6D0011E172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E750499626131A6D0011E172 /* Assets.xcassets */; };
 		E750499A26131A6D0011E172 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E750499826131A6D0011E172 /* LaunchScreen.storyboard */; };
 		E75049EC2613401B0011E172 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75049EB2613401B0011E172 /* APICaller.swift */; };
@@ -23,10 +33,20 @@
 
 /* Begin PBXFileReference section */
 		8AC0868BC45BF271FAFCCC07 /* Pods_GoldPrice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldPrice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E73A739226145BC4008947FA /* MError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MError.swift; sourceTree = "<group>"; };
+		E73A739B26146988008947FA /* UIMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMaker.swift; sourceTree = "<group>"; };
+		E73A739F26146B63008947FA /* MessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
+		E73A73B02614AC86008947FA /* GoldPriceCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldPriceCellViewModel.swift; sourceTree = "<group>"; };
+		E73A73B62614D230008947FA /* DotCALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotCALayer.swift; sourceTree = "<group>"; };
+		E73A73BA2614D257008947FA /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		E73A73BD2614D27D008947FA /* CurveAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveAlgorithm.swift; sourceTree = "<group>"; };
+		E73A73C12614EAD4008947FA /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		E73A73C42614EB1A008947FA /* GoldPriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldPriceTableViewCell.swift; sourceTree = "<group>"; };
+		E73A73C92614F3DA008947FA /* ServiceConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConnector.swift; sourceTree = "<group>"; };
 		E750498A26131A6C0011E172 /* GoldPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E750498D26131A6C0011E172 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E750498F26131A6C0011E172 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E750499126131A6C0011E172 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E750499126131A6C0011E172 /* GoldPricesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldPricesViewController.swift; sourceTree = "<group>"; };
 		E750499626131A6D0011E172 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E750499926131A6D0011E172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E750499B26131A6D0011E172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +89,50 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E73A739A26146975008947FA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E73A739B26146988008947FA /* UIMaker.swift */,
+				E73A739F26146B63008947FA /* MessageManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		E73A73AF2614AC36008947FA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E73A73B02614AC86008947FA /* GoldPriceCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E73A73B42614D1FD008947FA /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				E73A73B52614D208008947FA /* LineChart */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		E73A73B52614D208008947FA /* LineChart */ = {
+			isa = PBXGroup;
+			children = (
+				E73A73B62614D230008947FA /* DotCALayer.swift */,
+				E73A73BA2614D257008947FA /* LineChart.swift */,
+				E73A73BD2614D27D008947FA /* CurveAlgorithm.swift */,
+			);
+			path = LineChart;
+			sourceTree = "<group>";
+		};
+		E73A73C02614EAC0008947FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E73A73C12614EAD4008947FA /* BaseTableViewCell.swift */,
+				E73A73C42614EB1A008947FA /* GoldPriceTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E750498126131A6C0011E172 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +154,10 @@
 		E750498C26131A6C0011E172 /* GoldPrice */ = {
 			isa = PBXGroup;
 			children = (
+				E73A73C02614EAC0008947FA /* Views */,
+				E73A73B42614D1FD008947FA /* Chart */,
+				E73A73AF2614AC36008947FA /* ViewModels */,
+				E73A739A26146975008947FA /* Helper */,
 				E75049EA261340090011E172 /* Managers */,
 				E75049AF2613237F0011E172 /* Models */,
 				E75049A626131BB20011E172 /* Resources */,
@@ -115,7 +183,7 @@
 		E75049AE261323720011E172 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E750499126131A6C0011E172 /* ViewController.swift */,
+				E750499126131A6C0011E172 /* GoldPricesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -124,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				E75049F0261340D00011E172 /* GoldPrice.swift */,
+				E73A739226145BC4008947FA /* MError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -133,6 +202,7 @@
 			children = (
 				E75049EB2613401B0011E172 /* APICaller.swift */,
 				E7504A0426137C530011E172 /* NetworkMonitor.swift */,
+				E73A73C92614F3DA008947FA /* ServiceConnector.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -263,10 +333,20 @@
 			files = (
 				E75049F1261340D00011E172 /* GoldPrice.swift in Sources */,
 				E75049F4261342B40011E172 /* Extensions.swift in Sources */,
-				E750499226131A6C0011E172 /* ViewController.swift in Sources */,
+				E750499226131A6C0011E172 /* GoldPricesViewController.swift in Sources */,
+				E73A73C52614EB1A008947FA /* GoldPriceTableViewCell.swift in Sources */,
 				E750498E26131A6C0011E172 /* AppDelegate.swift in Sources */,
+				E73A73CA2614F3DA008947FA /* ServiceConnector.swift in Sources */,
+				E73A73B12614AC86008947FA /* GoldPriceCellViewModel.swift in Sources */,
+				E73A73BE2614D27D008947FA /* CurveAlgorithm.swift in Sources */,
+				E73A73BB2614D257008947FA /* LineChart.swift in Sources */,
 				E75049EC2613401B0011E172 /* APICaller.swift in Sources */,
 				E750499026131A6C0011E172 /* SceneDelegate.swift in Sources */,
+				E73A73B72614D230008947FA /* DotCALayer.swift in Sources */,
+				E73A739C26146988008947FA /* UIMaker.swift in Sources */,
+				E73A73A026146B63008947FA /* MessageManager.swift in Sources */,
+				E73A739326145BC4008947FA /* MError.swift in Sources */,
+				E73A73C22614EAD4008947FA /* BaseTableViewCell.swift in Sources */,
 				E7504A0526137C530011E172 /* NetworkMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
