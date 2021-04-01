@@ -3,5 +3,5 @@
 #Default branch: master
 
 #Run the project
-#Clone project from github.
-#"pod install" to install some libraries
+1.Clone project from github.
+2.Typing "pod install" to install some libraries.
