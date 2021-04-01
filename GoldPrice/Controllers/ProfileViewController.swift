@@ -24,13 +24,15 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addBackButton(tintColor: .black)
+        addBackButton(tintColor: .blue_1)
         title = "Profile"
-        addProfile()
+        navigationController?.setNavBarTitle(color: .blue_1, size: 20)
+        navigationController?.setBackgroundAndShadowImage(bgColor: .white, sdColor: .blue_2)
         view.backgroundColor = .white
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
+        addProfile()
     }
     
     override func viewDidLayoutSubviews() {

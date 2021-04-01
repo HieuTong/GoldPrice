@@ -33,6 +33,7 @@
 		E75049FC26134C130011E172 /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E75049FA26134BD40011E172 /* MyriadPro-Bold.otf */; };
 		E75049FE26134C160011E172 /* MyriadPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E75049FB26134BD40011E172 /* MyriadPro-Regular.otf */; };
 		E7504A0526137C530011E172 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7504A0426137C530011E172 /* NetworkMonitor.swift */; };
+		E78A298A2615BC6700BAFF66 /* OfflineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78A29892615BC6700BAFF66 /* OfflineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		E75049FA26134BD40011E172 /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
 		E75049FB26134BD40011E172 /* MyriadPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Regular.otf"; sourceTree = "<group>"; };
 		E7504A0426137C530011E172 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		E78A29892615BC6700BAFF66 /* OfflineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineView.swift; sourceTree = "<group>"; };
 		EC11212ED2EF15038665353F /* Pods-GoldPrice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldPrice.release.xcconfig"; path = "Target Support Files/Pods-GoldPrice/Pods-GoldPrice.release.xcconfig"; sourceTree = "<group>"; };
 		F582326F6F2BAD7CC2CD3BC6 /* Pods-GoldPrice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldPrice.debug.xcconfig"; path = "Target Support Files/Pods-GoldPrice/Pods-GoldPrice.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +139,7 @@
 			children = (
 				E73A73C12614EAD4008947FA /* BaseTableViewCell.swift */,
 				E73A73C42614EB1A008947FA /* ContentTableViewCell.swift */,
+				E78A29892615BC6700BAFF66 /* OfflineView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				E73A73C52614EB1A008947FA /* ContentTableViewCell.swift in Sources */,
 				E750498E26131A6C0011E172 /* AppDelegate.swift in Sources */,
 				E73A73CD2614FB08008947FA /* SettingViewController.swift in Sources */,
+				E78A298A2615BC6700BAFF66 /* OfflineView.swift in Sources */,
 				E73A73CA2614F3DA008947FA /* ServiceConnector.swift in Sources */,
 				E73A73B12614AC86008947FA /* ContentCellViewModel.swift in Sources */,
 				E73A73BE2614D27D008947FA /* CurveAlgorithm.swift in Sources */,

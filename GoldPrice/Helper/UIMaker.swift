@@ -59,4 +59,11 @@ struct UIMaker {
         return label
     }
     
+    static func makeImageView(image: UIImage? = nil, contentMode: UIView.ContentMode = .scaleAspectFit) -> UIImageView {
+        let iv = UIImageView(image: image)
+        iv.translatesAutoresizingMaskIntoConstraints = false
+        iv.contentMode = contentMode
+        iv.clipsToBounds = true
+        return iv
+    }
 }

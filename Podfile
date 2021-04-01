@@ -9,4 +9,5 @@ target 'GoldPrice' do
   pod 'Alamofire', '~> 4.8.0'
   pod 'SnapKit'
   pod 'SDWebImage'
+  pod 'ReachabilitySwift'
 end

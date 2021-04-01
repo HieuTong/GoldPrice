@@ -35,6 +35,7 @@ extension UIColor {
     static let blue_3 = color(hex: "DCF2FF")
     static let green_1 = color(hex: "00C6A2")
     static let red_error = color(hex: "F73C52")
+    static let blue_4 = color(hex: "2D467B")
 }
 
 enum appFont: String {
@@ -71,6 +72,12 @@ extension UINavigationController {
         navigationBar.setBackgroundImage(UIImage.imageFromColor(color: bgColor), for: .default)
         navigationBar.shadowImage = UIImage.imageFromColor(color: sdColor)
     }
+    
+    func hideBar(_ hide: Bool) {
+        UIView.animate(withDuration: 0.35, animations: { [weak self] in
+            self?.isNavigationBarHidden = hide
+        })
+    }
 }
 
 extension UIImage {
@@ -102,6 +109,33 @@ extension String {
         outputFormatter.dateFormat = format
 
         return outputFormatter.string(from: date)
+    }
+    
+    static func format(strings: [String],
+                       boldFont: UIFont = UIFont.boldSystemFont(ofSize: 14),
+                       boldColor: UIColor = UIColor.blue,
+                       inString string: String,
+                       font: UIFont = UIFont.systemFont(ofSize: 14),
+                       color: UIColor = UIColor.black,
+                       lineSpacing: CGFloat = 7,
+                       alignment: NSTextAlignment = .left) -> NSAttributedString {
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = lineSpacing
+        paragraphStyle.maximumLineHeight = 40
+        paragraphStyle.alignment = alignment
+        
+        let attributedString =
+            NSMutableAttributedString(string: string,
+                                      attributes: [
+                                        NSAttributedString.Key.font: font,
+                                        NSAttributedString.Key.foregroundColor: color,
+                                        NSAttributedString.Key.paragraphStyle:paragraphStyle])
+        let boldFontAttribute = [NSAttributedString.Key.font: boldFont, NSAttributedString.Key.foregroundColor: boldColor]
+        for bold in strings {
+            attributedString.addAttributes(boldFontAttribute, range: (string as NSString).range(of: bold))
+        }
+        return attributedString
     }
 }
 

@@ -18,11 +18,11 @@ class SettingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addBackButton(tintColor: .black)
+        addBackButton(tintColor: .blue_1)
         configureModels()
         title = "Settings"
-        navigationController?.setNavBarTitle(color: .black, size: 20)
-        navigationController?.setBackgroundAndShadowImage(bgColor: .white, sdColor: .white)
+        navigationController?.setNavBarTitle(color: .blue_1, size: 20)
+        navigationController?.setBackgroundAndShadowImage(bgColor: .white, sdColor: .blue_2)
         view.backgroundColor = .white
         view.addSubview(tableView)
         tableView.delegate = self

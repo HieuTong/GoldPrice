@@ -7,8 +7,11 @@
 
 import UIKit
 import SnapKit
+import Reachability
 
 class GoldPricesViewController: UIViewController {
+    
+    let reachability = try! Reachability()
     
     lazy var curvedlineChart: LineChart = {
         let lineChart = LineChart()
@@ -24,28 +27,35 @@ class GoldPricesViewController: UIViewController {
         return tableView
     }()
     
+    let activityIndicatorView: UIActivityIndicatorView = {
+        let activity = UIActivityIndicatorView(style: .whiteLarge)
+        activity.color = UIColor.blue_1
+        return activity
+    }()
+    
     private var prices = [GoldPrice]()
     private var viewModels = [ContentCellViewModel]()
         
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = "RTH Gold Price"
         tableView.delegate = self
         tableView.dataSource = self
-        fetchData()
-        setupViews()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        formatBar()
+        setReachabilityNotifier()
     }
 
     func setupViews() {
-        view.addSubview(tableView)
-        view.addSubview(curvedlineChart)
+        view.addSubviews(views: activityIndicatorView, tableView, curvedlineChart)
         curvedlineChart.isCurved = true
+        
+        activityIndicatorView.snp.makeConstraints { (maker) in
+            maker.centerX.centerY.equalToSuperview()
+            maker.height.width.equalTo(20)
+        }
         
         curvedlineChart.snp.makeConstraints { (maker) in
             maker.leading.top.trailing.equalToSuperview()
@@ -57,19 +67,55 @@ class GoldPricesViewController: UIViewController {
             maker.top.equalTo(curvedlineChart.snp.bottom).offset(padding)
         }
     }
+    
+    func setupNetworkErrorView() {
+        navigationController?.hideBar(true)
+        let offLineView = OfflineView()
+        view.addSubviews(views: offLineView)
+        offLineView.snp.makeConstraints { (maker) in
+            maker.edges.equalToSuperview()
+        }
+    }
  
     func formatBar() {
+        title = "RTH Gold Price"
         navigationController?.setNavBarTitle(color: .blue_1, size: 20)
         navigationController?.setBackgroundAndShadowImage(bgColor: UIColor.white, sdColor: UIColor.blue_2)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "info_icon"), style: .done, target: self, action: #selector(didTapSettings))
     }
     
+    private func setReachabilityNotifier() {
+        NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
+            do{
+              try reachability.startNotifier()
+            }catch{
+              print("could not start reachability notifier")
+            }
+    }
+    
+    @objc func reachabilityChanged(note: Notification) {
+        let reachability = note.object as! Reachability
+        if reachability.connection != .unavailable {
+            DispatchQueue.main.async {
+                self.setupViews()
+                self.formatBar()
+                self.fetchData()
+            }
+        } else {
+            DispatchQueue.main.async {
+                self.setupNetworkErrorView()
+            }
+        }
+    }
+    
     func fetchData() {
+        activityIndicatorView.startAnimating()
         GetGoldPriceWorker(successAction: didGetDataSuccess, failAction: didGetDataFail).execute()
     }
     
     func didGetDataSuccess(_ prices: [GoldPrice]) {
+        activityIndicatorView.stopAnimating()
         self.prices = prices
         curvedlineChart.dataEntries = prices.compactMap({ PointEntry(value: Int(Double($0.amount) ?? 0), label: String.formattedDate(string: $0.date, format: "d MMM")) })
         self.viewModels = prices.compactMap({ ContentCellViewModel(title: String.formattedDate(string: $0.date, format: "dd MMMM YYYY"), content: "$ \($0.amount)")}).reversed()
@@ -77,12 +123,19 @@ class GoldPricesViewController: UIViewController {
     }
     
     func didGetDataFail(_ err: MError) {
+        activityIndicatorView.stopAnimating()
         MessageManager.shared.show(message: err.error ?? "Oops, something went wrong!", type: .error)
     }
     
     @objc func didTapSettings() {
         let vc = SettingViewController()
         push(vc)
+    }
+    
+    deinit {
+        print("deinit")
+        reachability.stopNotifier()
+        NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: reachability)
     }
 }
 
